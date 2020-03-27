@@ -16,7 +16,7 @@
                             <i class="icon-globe-alt menu-icon"></i><span class="nav-text">Getting started with Loopback configuration </span>
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="./test">Loopback topology</a></li>
+                            <li><a href="./loopback">Loopback topology</a></li>
                             <li><a href="./code">Python code</a></li>
 
              
@@ -176,4 +176,7 @@
                                 </ul>
                             </li>
                         </ul>
-           
+                    </li>
+                </ul>
+            </div>
+        </div>

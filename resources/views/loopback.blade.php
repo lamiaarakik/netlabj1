@@ -30,7 +30,7 @@ myDiagram.nodeTemplate =
           $("ContextMenu",  // that has one button
             $("ContextMenuButton",
               $(go.TextBlock, "Configurer"),
-              { click: function(){ return window.location.replace("http://localhost:8000/form"); } })
+              { click: function(){ return window.location.replace("http://localhost:8000/loopbackform"); } })
             // more ContextMenuButtons would go here
           )  // end Adornment
       }
@@ -70,7 +70,7 @@ var model = $(go.TreeModel);
 model.nodeDataArray =
 [ // the "key" and "parent" property names are required,
   // but you can add whatever data properties you need for your app
-  { key: "1",              name: "192.168.1.1",   source: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Router.svg/1280px-Router.svg.png" , loc: "650 150" },
+  { key: "1",              name: "192.168.3.5",   source: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Router.svg/1280px-Router.svg.png" , loc: "650 150" },
   { key: "2", parent: "1", name: "",    source: "http://cliparts.co/cliparts/Aib/jRR/AibjRRBzT.png", loc: "500 300"  },
   
   

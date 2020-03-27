@@ -35,11 +35,11 @@
         bodyTag: "section",
         transitionEffect: "slideLeft",
         stepsOrientation: "vertical" ,
-        // onStepChanging: function (event, currentIndex, newIndex)
-        // {
-        //     form3.validate().settings.ignore = ":disabled,:hidden";
-        //     return form.valid();
-        // }
+        onStepChanging: function (event, currentIndex, newIndex)
+         {
+         form3.validate().settings.ignore = ":disabled,:hidden";
+          return form.valid();
+       }
     });
 
 

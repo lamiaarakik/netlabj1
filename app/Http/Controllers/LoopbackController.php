@@ -21,7 +21,7 @@ $loopback->loopback_adress=$loopback_address;
 $loopback->loopback_mask=$loopback_mask;
 
 $loopback->save();
-return redirect('/test');
+return redirect('/loopback');
   }
   public function show(){
 

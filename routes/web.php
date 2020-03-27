@@ -14,14 +14,20 @@
 Route::get('/', function () {
     return view('index');
 });
-Route::get('/test', function () {
-    return view('test');
+Route::get('/loopback', function () {
+    return view('loopback');
+});
+Route::get('/staticRouting', function () {
+    return view('staticRouting');
+});
+Route::get('/code', function () {
+    return view('code');
 });
 Route::get('/form', function () {
     return view('form');
 });
-Route::get('/welcome', function () {
-    return view('welcome');
+Route::get('/loopbackform', function () {
+    return view('loopbackform');
 });
 Route::post('/create',['uses'=>'LoopbackController@create', 
 'as'=>'loopback.create'
