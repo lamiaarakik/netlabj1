@@ -20,11 +20,11 @@ myDiagram.nodeTemplate =
           new go.Binding("location", "loc", go.Point.parse),
     {},
     $(go.Picture,
-      { margin: 20, width: 70, height: 70 },
+      
       new go.Binding("source")),
-      $(go.TextBlock, "Default Text",
-      {  stroke: "black", font: "bold 16px sans-serif" },
-      new go.Binding("text", "name")),
+      $(go.TextBlock,
+      { height: 90, verticalAlignment: go.Spot.Top, stroke: "black", font: "bold 10px sans-serif" ,margin: 2  },
+      new go.Binding("text", "name",),{verticalAlignment: go.Spot.Top, stroke: "black", font: "bold 16px sans-serif" ,margin: 10 }),
       {
         contextMenu:     // define a context menu for each node
           $("ContextMenu",  // that has one button
@@ -62,22 +62,21 @@ myDiagram.nodeTemplate =
           }, 'new node');
         } })
     );
-  myDiagram.linkTemplate =
-  $(go.Link,
-          { reshapable: true, resegmentable: true },
-          //{ routing: go.Link.Orthogonal },  // optional, but need to keep LinkingTool.temporaryLink in sync, above
-          { adjusting: go.Link.Stretch },  // optional
-          new go.Binding("points", "points").makeTwoWay(),
-          $(go.Shape, { strokeWidth: 1.5 }),
-          $(go.Shape, { toArrow: "OpenTriangle" }));
+    myDiagram.linkTemplate =
+    $(go.Link,       // the whole link panel
+      $(go.Shape)  // the link shape, default black stroke
+    ); // the link shape
+
 var model = $(go.TreeModel);
 model.nodeDataArray =
 [ // the "key" and "parent" property names are required,
   // but you can add whatever data properties you need for your app
-  { key: "1",              name: "192.168.3.5",   source: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Router.svg/1280px-Router.svg.png" , loc: "650 150" },
-  { key: "2", parent: "1", name: "",    source: "http://cliparts.co/cliparts/Aib/jRR/AibjRRBzT.png", loc: "500 300"  },
-  
-  
+  { key: "1", parent:"5"  ,      name: "192.168.3.5",   source: "./images/router.png" , loc: "800 150" },
+  { key: "2", name: "",    source: "./images/serial.png", loc: "550 150"  },
+  { key: "3", name: "",    source: "./images/serial.png", loc: "550 145"  },
+  { key: "4",parent:"5" ,          name: "192.168.3.4",   source: "./images/router.png" , loc: "370 150" },
+  { key: "5", name: "",   source: "./images/switch.png" , loc: "550 250" },
+
 ];
 myDiagram.model = model;
       
