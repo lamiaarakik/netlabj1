@@ -14,8 +14,24 @@
                         <span class="toggle-icon"><i class="icon-menu"></i></span>
                     </div>
                 </div>
+                <div class="nav-control">
+                    <div class="hamburger">
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">    Labs</a>
+                        <div class="dropdown-content">
+                        <a href="/loopback">loopback</a>
+                        <a href="/staticRouting">Routage Statique</a>
+                        <a href="/dynamic">Routage Dynamique</a>
+                            <a href="/OSPFUnicast">OSPF Unicast</a>
+                        
+                            <a href="/RipUnicast">RIP unicast </a>
+                            <a href="/Ip6OverIp4">Ipv6  over ipv4   </a>
+                            <a href="/privateVlan">VLAN Privé   </a>
+                        </div></div>
+                    </li>
                 <div class="header-left">
-                    <div class="input-group icons">
+                    </div>
+                  <!--  <div class="input-group icons">
                         <div class="input-group-prepend">
                             <span class="input-group-text bg-transparent border-0 pr-2 pr-sm-3" id="basic-addon1"><i class="mdi mdi-magnify"></i></span>
                         </div>
@@ -23,10 +39,12 @@
                         <div class="drop-down animated flipInX d-md-none">
                             <form action="#">
                                 <input type="text" class="form-control" placeholder="Search">
-                            </form>
+                            </form>-->
                         </div>
-                    </div>
-                </div>
+
+
+
+
                 <div class="header-right">
                     <ul class="clearfix">
                         <li class="icons dropdown"><a href="javascript:void(0)" data-toggle="dropdown">
@@ -141,6 +159,7 @@
                                 </div>
                             </div>
                         </li>
+
                         <li class="icons dropdown d-none d-md-flex">
                             <a href="javascript:void(0)" class="log-user"  data-toggle="dropdown">
                                 <span>English</span>  <i class="fa fa-angle-down f-s-14" aria-hidden="true"></i>
@@ -184,3 +203,68 @@
                 </div>
             </div>
         </div>
+
+        <style>
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+
+            }
+
+            li {
+                float: left;
+            }
+
+            li a, .dropbtn {
+                display: inline-block;
+                color: black;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+
+            li.dropdown {
+                display: inline-block;
+
+            }
+
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: white;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+
+            .dropdown-content a {
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+
+            .dropdown-content a:hover {
+                background-color: white;
+                text-size:500px;
+            }
+
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+            li a:hover, .dropdown:hover .dropbtn {
+                background-color: #d765ff;
+
+
+            }
+            .dropbtn{
+                font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+                font-size:40px;
+                font-color: white;
+            }
+
+        </style>

@@ -2,11 +2,19 @@
 @section('content')
 <div class="nk-sidebar">
         <br>
-        <h4>Manipulation simple de l'adresse Loopback</h4><br>
+        <h4>Le Routage Staique</h4><br>
         <div class="content1">
-
-         Cette manipulation conciste à changer l'adresse Loopback d'un routeur existant sur GNS3,
-         faite une clique droite sur le routeur et changer remplisser le formlaire par la configuration souhaitée.</div>
+          <h5>Scenario</h5>
+          Vous travaillez en tant que spécialiste du réseautage dans une entreprise appelée «ENSAJNETWORK». Un de leurs clients dispose de 2 liens dédiés pour connecter leur site de Casablanca au site d'Eljadida'. Vous n'êtes pas autorisé à utiliser des protocoles de routage, car ils paient pour chaque bit envoyé sur ces liens. Vous devez utiliser le routage statique pour faire le travail et garder le client satisfait..
+          <h5>l'objectif</h5>
+          aite une clique droite sur la topologie et accédez au formulaire :
+          <ul><li>Toutes les adresses IP sont préconfigurées comme indiqué dans l'image de la topologie.</li>
+          <li>
+Il existe une interface Loopback0 sur le routeur Eljadida: adresse IP 2.2.2.2/30.
+Il y a une interface Loopback0 sur le routeur de Casablanca: Adresse IP 1.1.1.1/30..</li>
+          <li></li>
+          <li></li>
+          </ul></div>
     </div>
     <style>
         h4{
@@ -25,9 +33,7 @@
 
 
     </style>
-
-
-    <div class="content-body">
+ <div class="content-body">
 
 <div class="row page-titles mx-0">
     <div class="col p-md-0">
@@ -42,7 +48,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
-            <form action="{{route('loopback.create')}}" method="post" id="step-form-horizontal" class="step-form-horizontal">
+            <form action="{{route('static.create')}}" method="post" id="step-form-horizontal" class="step-form-horizontal">
             {{ csrf_field() }} 
                 <div>
                     <h4>Equipement access</h4>
@@ -84,7 +90,42 @@
                          
                         </div>
                     </section>
-                    
+                    <h4>Serial0/0 Address</h4>
+                    <section>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <input type="text" name="serial0_address" class="form-control" placeholder="Serial0/0 ip address" required>
+                                </div>
+                            </div>
+                           
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <input type="text" name="serial0_mask" class="form-control" placeholder="Serial0/0 mask" required>
+                                </div>
+                            </div>
+                           
+                         
+                        </div>
+                    </section>
+                    <h4>Serial1/0 Address</h4>
+                    <section>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <input type="text" name="serial1_address" class="form-control" placeholder="Serial1/0 ip address" required>
+                                </div>
+                            </div>
+                           
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <input type="text" name="serial1_mask" class="form-control" placeholder="Serial1/0 mask" required>
+                                </div>
+                            </div>
+                           
+                         
+                        </div>
+                    </section>
                     <h4>Confirmation</h4>
                     <section>
                         <div class="row h-100">

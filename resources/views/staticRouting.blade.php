@@ -1,5 +1,38 @@
 @extends('layout.master')
 @section('content')
+<div class="nk-sidebar">
+        <br>
+        <h4>Le Routage Staique</h4><br>
+        <div class="content1">
+          <h5>Scenario</h5>
+          Vous travaillez en tant que spécialiste du réseautage dans une entreprise appelée «ENSAJNETWORK». Un de leurs clients dispose de 2 liens dédiés pour connecter leur site de Casablanca au site d'Eljadida'. Vous n'êtes pas autorisé à utiliser des protocoles de routage, car ils paient pour chaque bit envoyé sur ces liens. Vous devez utiliser le routage statique pour faire le travail et garder le client satisfait..
+          <h5>l'objectif</h5>
+          aite une clique droite sur la topologie et accédez au formulaire :
+          <ul><li>Toutes les adresses IP sont préconfigurées comme indiqué dans l'image de la topologie.</li>
+          <li>
+Il existe une interface Loopback0 sur le routeur Eljadida: adresse IP 2.2.2.2/30.
+Il y a une interface Loopback0 sur le routeur de Casablanca: Adresse IP 1.1.1.1/30..</li>
+          <li></li>
+          <li></li>
+          </ul></div>
+    </div>
+    <style>
+        h4{
+            font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            font-color: #6d53f8;
+            text-decoration-color: #6d53f8;
+            margin-top: 20px;
+            margin-left: 10px;
+
+        }
+        .content1{
+            margin-left: 10px;
+
+
+        }
+
+
+    </style>
 
 <head>
     <meta charset="UTF-8">
@@ -23,14 +56,14 @@ myDiagram.nodeTemplate =
       
       new go.Binding("source")),
       $(go.TextBlock,
-      { height: 90, verticalAlignment: go.Spot.Top, stroke: "black", font: "bold 10px sans-serif" ,margin: 2  },
-      new go.Binding("text", "name",),{verticalAlignment: go.Spot.Top, stroke: "black", font: "bold 16px sans-serif" ,margin: 10 }),
+      { height: 40, verticalAlignment: go.Spot.Top, stroke: "black", font: "bold 10px sans-serif"  },
+      new go.Binding("text", "name")),
       {
         contextMenu:     // define a context menu for each node
           $("ContextMenu",  // that has one button
             $("ContextMenuButton",
               $(go.TextBlock, "Configurer"),
-              { click: function(){ return window.location.replace("http://localhost:8000/loopbackform"); } })
+              { click: function(){ return window.location.replace("http://localhost:8000/staticroutingform"); } })
             // more ContextMenuButtons would go here
           )  // end Adornment
       }
@@ -71,10 +104,10 @@ var model = $(go.TreeModel);
 model.nodeDataArray =
 [ // the "key" and "parent" property names are required,
   // but you can add whatever data properties you need for your app
-  { key: "1", parent:"5"  ,      name: "192.168.3.5",   source: "./images/router.png" , loc: "800 150" },
+  { key: "1", parent:"5"  ,       source: "./images/router.png" , loc: "800 150" },
   { key: "2", name: "",    source: "./images/serial.png", loc: "550 150"  },
   { key: "3", name: "",    source: "./images/serial.png", loc: "550 145"  },
-  { key: "4",parent:"5" ,          name: "192.168.3.4",   source: "./images/router.png" , loc: "370 150" },
+  { key: "4",parent:"5" ,   source: "./images/router.png" , loc: "370 150" },
   { key: "5", name: "",   source: "./images/switch.png" , loc: "550 250" },
 
 ];

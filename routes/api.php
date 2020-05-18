@@ -13,6 +13,10 @@ use Illuminate\Http\Request;
 |
 */
 Route::resource('posts', 'API\LoopbackAPIController');
+Route::resource('static', 'API\StaticRoutingAPIController');
+Route::resource('dynamic', 'API\DynamicAPIController');
+Route::resource('Rips', 'API\APIRipController');
+Route::resource('ospfs', 'API\LoopbackAPIController');
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });

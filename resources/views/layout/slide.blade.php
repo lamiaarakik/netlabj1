@@ -1,4 +1,4 @@
-<div class="nk-sidebar">           
+<!-- <div class="nk-sidebar">
             <div class="nk-nav-scroll">
                 <ul class="metismenu" id="menu">
                     <li class="nav-label">Dashboard</li>
@@ -8,7 +8,7 @@
                         </a>
                         <ul aria-expanded="false">
                             <li><a href="./index.html">Home 1</a></li>
-                            <!-- <li><a href="./index-2.html">Home 2</a></li> -->
+                             //<li><a href="./index-2.html">Home 2</a></li>
                         </ul>
                     </li>
                     <li class="mega-menu mega-menu-sm">
@@ -116,13 +116,13 @@
                             <li><a href="./ui-progressbar.html">Progressbar</a></li>
                             <li><a href="./ui-tab.html">Tab</a></li>
                             <li><a href="./ui-typography.html">Typography</a></li>
-                        <!-- </ul>
+                       // </ul>
                     </li>
                     <li>
                         <a class="has-arrow" href="javascript:void()" aria-expanded="false">
                             <i class="icon-layers menu-icon"></i><span class="nav-text">Components</span>
                         </a>
-                        <ul aria-expanded="false"> -->
+                        <ul aria-expanded="false"> //
                             <li><a href="./uc-nestedable.html">Nestedable</a></li>
                             <li><a href="./uc-noui-slider.html">Noui Slider</a></li>
                             <li><a href="./uc-sweetalert.html">Sweet Alert</a></li>
@@ -179,4 +179,4 @@
                     </li>
                 </ul>
             </div>
-        </div>
+        </div>-->
